@@ -19,16 +19,16 @@ export default function SearchBox() {
             let originalData = await data.json();
 
             const importantWeatherData = {
-                city: originalData.name,
-                country: originalData.sys.country,
-                temperature: originalData.main.temp,
-                feelsLike: originalData.main.feels_like,
-                humidity: originalData.main.humidity,
-                pressure: originalData.main.pressure,
-                windSpeed: originalData.wind.speed,
-                weather: originalData.weather[0].description,
-                sunrise: new Date(originalData.sys.sunrise * 1000).toLocaleTimeString(),
-                sunset: new Date(originalData.sys.sunset * 1000).toLocaleTimeString(),
+                city: originalData?.name,
+                country: originalData?.sys?.country,
+                temperature: originalData?.main?.temp,
+                feelsLike: originalData?.main?.feels_like,
+                humidity: originalData?.main?.humidity,
+                pressure: originalData?.main?.pressure,
+                windSpeed: originalData?.wind?.speed,
+                weather: originalData?.weather[0]?.description,
+                sunrise: new Date(originalData?.sys?.sunrise * 1000).toLocaleTimeString(),
+                sunset: new Date(originalData?.sys?.sunset * 1000).toLocaleTimeString(),
             };
 
             setSearchResults(importantWeatherData);
@@ -63,12 +63,14 @@ export default function SearchBox() {
             </form>
 
                     {loading ? (
-        'loading...'
+                <div className='w-full h-96 flex justify-center items-center'>
+                     <span className="loading loading-dots loading-lg"></span>
+                </div>
         ) : (
         searchResults ? (
             <ResultBox searchResults={searchResults} />
         ) : (
-            <h1 className='text-gray-400 text-xl mt-8'>No data found</h1>
+            <h1 className='text-gray-400 text-xl mt-8'>No data found, Search based on City name</h1>
         )
         )}
 
