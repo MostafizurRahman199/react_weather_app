@@ -16,11 +16,11 @@ export default function ResultBox({ searchResults }) {
     if (temperature > 30) {
       return "https://img.freepik.com/free-photo/closeup-shot-thermometer-beach-sand_181624-12367.jpg?w=996&t=st=1728456996~exp=1728457596~hmac=2d73c2436375fa80db8e8228920b386293f965f18dc338839eb12321eaa07197"; // Replace with actual image URL for hot weather
     } else if (temperature >= 20 && temperature <= 30) {
-      return "https://img.freepik.com/free-photo/sun-shining-dark-clouds-green-field_181624-26064.jpg?t=st=1728457079~exp=1728460679~hmac=3e612bc236220c5e17edfc2b313e683e6fc58bd0d00b7577433f34e6900ee988&w=996"; // Replace with actual image URL for warm weather
+      return "https://images.unsplash.com/photo-1586078074298-05dca4848695?q=80&w=1635&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"; // Replace with actual image URL for warm weather
     } else if (temperature >= 10 && temperature < 20) {
-      return "https://img.freepik.com/free-photo/girl-walks-umbrella-rainy-weather-bridge-forest_169016-11473.jpg?t=st=1728457106~exp=1728460706~hmac=32a794ca81b788b3403237e887348b04430cbdfe75151b6d11c9b667493ba3e6&w=996"; // Replace with actual image URL for cool weather
+      return "https://www.shutterstock.com/image-photo/rainy-day-concept-weather-information-600nw-1906836694.jpg"; // Replace with actual image URL for cool weather
     } else {
-      return "https://img.freepik.com/free-photo/bare-trees-daytime_395237-139.jpg?t=st=1728457163~exp=1728460763~hmac=ac4feedf8601529ef64fa31d49a7e657acc4306045c1ce825c6ebd07b5d59a18&w=1060"; // Replace with actual image URL for cold weather
+      return "https://i1.pickpik.com/photos/809/61/217/winter-tree-snow-cold-preview.jpg"; // Replace with actual image URL for cold weather
     }
   };
 
