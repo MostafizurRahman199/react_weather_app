@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import ResultBox from './ResultBox';
 
 export default function SearchBox() {
+
     let [city, setCity] = useState("");
     let [loading, setLoading] = useState(false);
     let [searchResults, setSearchResults] = useState(null);
@@ -12,7 +13,7 @@ export default function SearchBox() {
     
     const weatherInfo = async () => {
         setLoading(true);
-        const API_URL = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;
+        const API_URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;
 
         try {
             let data = await fetch(API_URL);
@@ -62,7 +63,7 @@ export default function SearchBox() {
                 <Button type='submit' variant="contained" startIcon={<SearchIcon />}>Search</Button>
             </form>
 
-                    {loading ? (
+         {loading ? (
                 <div className='w-full h-96 flex justify-center items-center'>
                      <span className="loading loading-dots loading-lg"></span>
                 </div>
