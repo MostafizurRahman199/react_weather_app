@@ -14,7 +14,7 @@ export default function ResultBox({ searchResults }) {
   // Function to determine the image based on temperature
   const getTemperatureImage = (temperature) => {
     if (temperature > 30) {
-      return "https://img.freepik.com/free-photo/closeup-shot-thermometer-beach-sand_181624-12367.jpg?w=996&t=st=1728456996~exp=1728457596~hmac=2d73c2436375fa80db8e8228920b386293f965f18dc338839eb12321eaa07197"; // Replace with actual image URL for hot weather
+      return "https://images.stockcake.com/public/0/a/b/0ab3885d-7576-4f14-8e90-b45b249e0733_large/sunny-green-field-stockcake.jpg"; // Replace with actual image URL for hot weather
     } else if (temperature >= 20 && temperature <= 30) {
       return "https://images.unsplash.com/photo-1586078074298-05dca4848695?q=80&w=1635&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"; // Replace with actual image URL for warm weather
     } else if (temperature >= 10 && temperature < 20) {
